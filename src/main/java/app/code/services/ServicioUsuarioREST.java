@@ -22,6 +22,17 @@ public class ServicioUsuarioREST {
 	@Inject
 	private GestionUsuarioON gestionUsuario;
 	
+	@GET
+	@Path("testHello")
+    @Produces("application/json")
+	public ResultadoREST testApiIntegracion() {
+		try {
+			return new ResultadoREST("200", "Servicio web correcto");
+		}catch (Exception ex) {
+			return new ResultadoREST("100", ex.toString());
+		}
+	}
+	
 	@POST
 	@Path("crearEditar")
 	@Consumes("application/json")
