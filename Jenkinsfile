@@ -8,7 +8,7 @@ pipeline {
         }
 		stage('-- deploy --') {
             steps {
-                sh '$WILDFLY_HOME/bin/jboss-cli.sh --connect --command="deploy --force target/AppTestApi.war"'
+                sh '/opt/wildfly/bin/jboss-cli.sh --connect --command="deploy --force target/AppTestApi.war"'
             }
         }
     }
