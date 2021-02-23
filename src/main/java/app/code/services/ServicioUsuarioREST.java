@@ -27,7 +27,7 @@ public class ServicioUsuarioREST {
     @Produces("application/json")
 	public ResultadoREST testApiIntegracion() {
 		try {
-			return new ResultadoREST("200", "Servicio corriendo correcto");
+			return new ResultadoREST("200", "Servicio corriendo de forma correcta");
 		}catch (Exception ex) {
 			return new ResultadoREST("100", ex.toString());
 		}
